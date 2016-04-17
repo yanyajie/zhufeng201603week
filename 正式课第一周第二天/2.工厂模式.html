@@ -38,7 +38,7 @@
                 console.log("写js");
                 //            return 1
             }
-        }
+        };
         return obj;
     }
     var arr = [];
@@ -60,15 +60,11 @@
     //再别的语言里面有重载，js中没有，因为后面的会覆盖掉前面的
     //js中模拟重载 手动写的
     function sum(){
-        //传递一个参数的时候
-        if(arguments.length==1){
-        //传递两个参数的时候
-        }else if(arguments.length==2){
-            //判断每一个参数的类型 把每一个参数取出来
-            for(var i = 0; i<arguments.length;i++){
-                //如果是函数类型 我们就让他执行
+        if(arguments.length==1){ //传递一个参数的时候
+        }else if(arguments.length==2){//传递两个参数的时候
+            for(var i = 0; i<arguments.length;i++){//判断每一个参数的类型 把每一个参数取出来
                 if(typeof arguments[i]=="function"){
-                    arguments[i]();
+                    arguments[i]();//如果是函数类型 我们就让他执行
                 }else{
                     //不是得话直接当前传进来的值
                     console.log(arguments[i]);
